@@ -1,2 +1,2 @@
 # Zenea
-The Zenea project aims to create a simple and universal protocol for decentralised network-based file sharing. It builds on the concept of cloud storage while removing the familiar server-client structure and thereby taking trust and load off single entities.
+The Zenea Project is a new approach to file storage and sharing. It aims to establish a simple yet versatile protocol for organising and structuring data that can be used as a basis for a wide variety of data handling and storage systems. On top of that, it builds on the concept of cloud storage and file exchange to create a decentralised network-based system for sharing and synchronising data.
