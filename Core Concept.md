@@ -12,7 +12,6 @@ Each entry contains:
 - optionally, the previous entry it builds on (its **identifier**).
 - a singular [author](#Authorship) that submits and signs the entry (their **public key**).
 - a unique **identifier**.
-- a **timestamp**.
 - a **type identifier** that describes what the entry does to the node.
 - optionally, a **payload** that can be data of any kind or size.
 ## Versions
