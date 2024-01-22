@@ -21,11 +21,13 @@ Each node is uniquely identified by:
 Entries are the atomic units of data that are used to package all information that is sent and stored using the Zenea protocol. An entry can, depending on its type, represent any piece of data, like a message or comment, a git commit or a blog post.
 Each entry contains:
 - a unique **ID**.
+- a **timestamp** of when the entry was submitted.
 - a [node's](#Nodes) **ID and authors**.
 - optionally, the identifier of the **previous entry** it builds on.
 - the **public key** of a singular [author](#Authorship) that submits and signs the entry.
 - a **type identifier** that describes what kind of data the entry contains and what it does to the node.
 - optionally, a **payload** that can be data of any kind or size.
+All the attributes of an entry except the payload are together called an **entry header**.
 ## Versions
 Each entry can optionally point to exactly other previous entry. In this way, a collection of entries all referencing the same node form one or more *version trees* of that node. Such a tree consists of vertices that are entries where each vertex points to its parent. An entry that does not point to another entry is the root of a new version tree.
 Any subtree starting at the root of a version tree is a sequential list of consecutive entries all referencing the same node where the first one does not point to any other entry. Such a list of entries can be interpreted to form a final set of data known as a *version* of the referenced node.
