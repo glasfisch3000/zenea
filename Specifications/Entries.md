@@ -1,5 +1,14 @@
-# Entry Format
-Each entry is stored and shared as a block of binary data. It consists of an **entry header** made up of segments in a fixed order and an **entry payload** that can be of any length, including zero, as specified in the header.
+# Entry Storage
+An entry's header information is stored in a single Data Layer block.
+The hash of that block is used as the entry's ID which is not included in the block.
+The entry's payload, if it exists, is stored in one or more blocks whose hashes are included in the entry header. In this way, each entry references, but does not directly contain its payload.
+Each entry is stored as a UTF-8-encoded JSON object that does not contain any whitespaces or otherwise unnecessary characters, with the following attributes:
+- `author` - the public key of the author that submitted the entry, as a base64 string.
+- `node` - the ID of the node that the entry is being added to, as a base64 string.
+- `authors` - the public keys of the authors of the entry's node, as a base64 string.
+- `predecessor` (optional) - the ID of the previous entry that this entry is building on, as a base64 string.
+- `type` - the entry's type, as a string.
+- `signature` - a signature of the entry header, except its ID and the signature itself.
 
 | Segment Name | Length (in Bits) | Type | Description |
 | ---- | ---- | ---- | ---- |
