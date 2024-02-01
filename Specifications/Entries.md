@@ -1,7 +1,9 @@
 # Entry Storage
 An entry's header information is stored in a single Data Layer block.
 The hash of that block is used as the entry's ID which is not included in the block.
+
 The entry's payload, if it exists, is stored in one or more blocks whose hashes are included in the entry header. In this way, each entry references, but does not directly contain its payload.
+
 Each entry is stored as a UTF-8-encoded JSON object that does not contain any whitespaces or otherwise unnecessary characters, with the following attributes:
 - `author` - the public key of the author that submitted the entry, as a base64 string.
 - `node` - the ID of the node that the entry is being added to, as a base64 string.
