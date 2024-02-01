@@ -1,4 +1,4 @@
-# Specifications for HTTP API Access
+# HTTP API Access
 Zenea Data Layer servers can choose to provide access to their data or relay requests to connected servers via an HTTP API. Such an API should provide access to a set of functions as listed below.
 
 | HTTP request | Description | Appropriate response body | Possible status codes |
