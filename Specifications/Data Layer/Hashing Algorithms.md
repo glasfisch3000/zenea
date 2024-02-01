@@ -1,6 +1,4 @@
-# Data Blocks
-Each block's data is stored and distributed in binary form.
-
+# Specifications for Hashing Algorithms
 Each block's ID is a cryptographic hash digest in hexadecimal form, accompanied by an identifier of the used algorithm.
 
 There are a number of different hash functions in use. While the 256-bit [SHA2](https://en.wikipedia.org/wiki/SHA-2) function should be used by default, any software communicating as part of a Data Layer network should be able to handle and use the following algorithms:
